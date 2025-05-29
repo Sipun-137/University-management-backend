@@ -1,6 +1,5 @@
 package com.sipun.UniversityBackend.academic.dto;
 
-import com.sipun.UniversityBackend.academic.dto.Shift;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

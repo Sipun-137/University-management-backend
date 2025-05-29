@@ -2,7 +2,6 @@ package com.sipun.UniversityBackend.academic.controller;
 
 import com.sipun.UniversityBackend.academic.dto.SubjectRequestDTO;
 import com.sipun.UniversityBackend.academic.dto.SubjectResponseDTO;
-import com.sipun.UniversityBackend.academic.model.Subject;
 import com.sipun.UniversityBackend.academic.service.SubjectService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,15 +3,12 @@ package com.sipun.UniversityBackend.faculty.dto;
 import com.sipun.UniversityBackend.academic.dto.BranchMinimalDTO;
 import com.sipun.UniversityBackend.faculty.model.Faculty;
 import com.sipun.UniversityBackend.student.model.Student;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Data
 @Builder

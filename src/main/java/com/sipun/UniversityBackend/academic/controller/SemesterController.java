@@ -3,7 +3,6 @@ package com.sipun.UniversityBackend.academic.controller;
 
 import com.sipun.UniversityBackend.academic.dto.SemesterRequest;
 import com.sipun.UniversityBackend.academic.dto.SemesterResponse;
-import com.sipun.UniversityBackend.academic.model.Semester;
 import com.sipun.UniversityBackend.academic.service.SemesterService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

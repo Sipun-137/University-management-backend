@@ -3,7 +3,6 @@ package com.sipun.UniversityBackend.faculty.dto;
 import com.sipun.UniversityBackend.academic.dto.SectionMinimalDTO;
 import com.sipun.UniversityBackend.academic.dto.SubjectMinimalDTO;
 import com.sipun.UniversityBackend.faculty.model.FacultyAssignment;
-import com.sipun.UniversityBackend.student.dto.StudentResponseDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

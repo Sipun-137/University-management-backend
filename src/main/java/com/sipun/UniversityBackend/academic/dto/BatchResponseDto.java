@@ -1,9 +1,13 @@
 package com.sipun.UniversityBackend.academic.dto;
 
 import com.sipun.UniversityBackend.academic.model.Batch;
+import lombok.Builder;
+import lombok.Data;
 
 import java.util.List;
 
+@Data
+@Builder
 public class BatchResponseDto{
     private Long id;
     private int startYear;

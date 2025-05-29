@@ -1,9 +1,7 @@
 package com.sipun.UniversityBackend.student.controller;
 
-import com.sipun.UniversityBackend.academic.exception.ResourceNotFoundException;
 import com.sipun.UniversityBackend.auth.model.UserPrincipal;
 import com.sipun.UniversityBackend.student.dto.*;
-import com.sipun.UniversityBackend.student.model.Student;
 import com.sipun.UniversityBackend.student.service.StudentService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

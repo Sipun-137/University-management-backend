@@ -1,7 +1,6 @@
 package com.sipun.UniversityBackend.academic.controller;
 
 
-import com.sipun.UniversityBackend.academic.dto.BatchDto;
 import com.sipun.UniversityBackend.academic.dto.BatchRequestDTO;
 import com.sipun.UniversityBackend.academic.dto.BatchResponseDto;
 import com.sipun.UniversityBackend.academic.model.Batch;

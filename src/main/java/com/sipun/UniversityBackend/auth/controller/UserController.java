@@ -1,11 +1,9 @@
 package com.sipun.UniversityBackend.auth.controller;
 
-import com.sipun.UniversityBackend.auth.exception.EmailAlreadyExistsException;
 import com.sipun.UniversityBackend.auth.model.User;
 import com.sipun.UniversityBackend.auth.service.MailService;
 import com.sipun.UniversityBackend.auth.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,6 +1,5 @@
 package com.sipun.UniversityBackend.academic.dto;
 
-import com.sipun.UniversityBackend.academic.model.Branch;
 import com.sipun.UniversityBackend.academic.model.Semester;
 import com.sipun.UniversityBackend.academic.model.Subject;
 import lombok.AllArgsConstructor;
