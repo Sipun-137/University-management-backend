@@ -14,7 +14,7 @@ public class UserService {
 
     @Autowired
     private UserRepo repo;
-    private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
+    private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
 
     public User saveUser(User user) {
         if (repo.existsByEmail(user.getEmail())) {
@@ -26,6 +26,6 @@ public class UserService {
     }
 
     public User findByEmail(String email) {
-        return repo.findByEmail(email);
+        return repo.findByEmail(email).orElseThrow(()->new RuntimeException("User not found"));
     }
 }

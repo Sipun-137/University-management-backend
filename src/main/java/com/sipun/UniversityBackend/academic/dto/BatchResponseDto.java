@@ -1,14 +1,16 @@
 package com.sipun.UniversityBackend.academic.dto;
 
 import com.sipun.UniversityBackend.academic.model.Batch;
-import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+
 
 import java.util.List;
 
 @Data
-@Builder
+@Getter
 public class BatchResponseDto{
+    // Getters
     private Long id;
     private int startYear;
     private int endYear;
@@ -29,11 +31,4 @@ public class BatchResponseDto{
                 .toList();
     }
 
-    // Getters
-    public Long getId() { return id; }
-    public int getStartYear() { return startYear; }
-    public int getEndYear() { return endYear; }
-    public CourseMinimalDTO getCourse() { return course; }
-    public Long getCourseId(){return courseId;}
-    public List<SectionDto> getSections() { return sections; }
 }
