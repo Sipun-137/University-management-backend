@@ -4,5 +4,8 @@ public enum NoticeType {
     GENERAL,
     EXAM,
     EVENT,
-    URGENT
+    URGENT,
+    ASSIGNMENT,
+    ANNOUNCEMENT,
+    OTHER
 }

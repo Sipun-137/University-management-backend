@@ -61,4 +61,20 @@ public class NoticeService {
 //        dto.setCreatedBy(notice.getCreatedBy());
         return dto;
     }
+
+    public NoticeResponseDTO getNoticeById(Long id) {
+        return mapToResponseDTO(noticeRepository.findById(id).orElseThrow(() -> new RuntimeException("Notice not found")));
+    }
+
+    public NoticeResponseDTO updateNotice(Long id, NoticeRequestDTO dto) {
+        Notice existing = noticeRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Notice not found"));
+        existing.setTitle(dto.getTitle());
+        existing.setContent(dto.getDescription());
+        existing.setType(dto.getType());
+        existing.setTargetAudience(dto.getTargetAudience());
+        existing.setValidFrom(dto.getValidFrom());
+        existing.setValidTo(dto.getValidTo());
+        return mapToResponseDTO(noticeRepository.save(existing));
+    }
 }

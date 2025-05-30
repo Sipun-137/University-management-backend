@@ -17,8 +17,8 @@ public class NoticeController {
     @Autowired
     private NoticeService noticeService;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
-    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<NoticeResponseDTO> createNotice(@RequestBody NoticeRequestDTO dto) {
         NoticeResponseDTO created = noticeService.createNotice(dto);
         return ResponseEntity.ok(created);
@@ -35,9 +35,21 @@ public class NoticeController {
         return ResponseEntity.ok(noticeService.getAllNotices());
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteNotice(@PathVariable Long id) {
         noticeService.deleteNotice(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<NoticeResponseDTO> getNoticeById(@PathVariable Long id) {
+        return ResponseEntity.ok(noticeService.getNoticeById(id));
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @PutMapping("/{id}")
+    public ResponseEntity<NoticeResponseDTO> updateNotice(@PathVariable Long id, @RequestBody NoticeRequestDTO dto) {
+        return ResponseEntity.ok(noticeService.updateNotice(id, dto));
     }
 }
