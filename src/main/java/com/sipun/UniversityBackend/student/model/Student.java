@@ -3,6 +3,7 @@ package com.sipun.UniversityBackend.student.model;
 import com.sipun.UniversityBackend.academic.model.*;
 import com.sipun.UniversityBackend.attendance.model.AttendanceRecord;
 import com.sipun.UniversityBackend.auth.model.User;
+import com.sipun.UniversityBackend.exam.model.ExamResult;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
@@ -10,6 +11,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -91,7 +93,7 @@ public class Student {
     // Additional Fields
     private String bloodGroup;
     private String nationality;
-    private String profilePhotoUrl; // URL to cloud-stored photo
+    private String profilePhotoUrl; // URL to
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -112,6 +114,9 @@ public class Student {
 
     @OneToMany(mappedBy = "student")
     private List<AttendanceRecord> attendanceRecords;
+
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+    private List<ExamResult> examResults = new ArrayList<>();
 
 
     // Embeddable Guardian Class

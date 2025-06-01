@@ -2,6 +2,7 @@ package com.sipun.UniversityBackend.academic.model;
 
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.sipun.UniversityBackend.exam.model.Exam;
 import com.sipun.UniversityBackend.faculty.model.FacultyAssignment;
 import jakarta.persistence.*;
 import lombok.*;
@@ -39,6 +40,9 @@ public class Subject {
 
     @OneToMany(mappedBy = "subject")
     private List<TimeTableEntry> timeTableEntries;
+
+    @OneToMany(mappedBy = "subject")
+    private List<Exam> exams;
 
     @Column(nullable = false)
     private int weeklyHours;
