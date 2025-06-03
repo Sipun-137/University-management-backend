@@ -1,7 +1,7 @@
 package com.sipun.UniversityBackend.exam.model;
 
+import com.sipun.UniversityBackend.auth.model.User;
 import com.sipun.UniversityBackend.exam.enums.RubricStatus;
-import com.sipun.UniversityBackend.faculty.model.Faculty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -35,12 +35,9 @@ public class Rubric {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "creator_id")
-    private Faculty creator;  // Faculty member
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "approver_id")
-    private Faculty approver;  // HOD/committee
+    private User creator;  //basically the exam controller
 
     @Version
     private Integer version;
+
 }
