@@ -1,5 +1,6 @@
 package com.sipun.UniversityBackend.exam.model;
 
+import com.sipun.UniversityBackend.faculty.model.Faculty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,8 +20,9 @@ public class Marker {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, nullable = false)
-    private String staffId;
+    @OneToOne(optional = false)
+    @JoinColumn(name = "faculty_id", referencedColumnName = "id", unique = true)
+    private Faculty faculty;
 
     @Column(nullable = false)
     private String fullName;
