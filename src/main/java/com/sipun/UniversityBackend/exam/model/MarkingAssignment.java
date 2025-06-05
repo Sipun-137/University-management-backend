@@ -26,7 +26,6 @@ public class MarkingAssignment {
     @JoinColumn(name = "marker_id", nullable = false)
     private Marker marker;
 
-    private String assignedQuestions; // e.g., "1-5, 8"
 
     @Enumerated(EnumType.STRING)
     private MarkingProgress markingProgress = MarkingProgress.NOT_STARTED;
