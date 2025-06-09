@@ -49,7 +49,7 @@ public class SecurityConfig {
         http.csrf(customizer->customizer.disable());
         http.cors(Customizer.withDefaults());
         http.authorizeHttpRequests(request->request
-                .requestMatchers("/register","/login")
+                .requestMatchers("/login")
                 .permitAll()
                 .anyRequest()
                 .authenticated());
