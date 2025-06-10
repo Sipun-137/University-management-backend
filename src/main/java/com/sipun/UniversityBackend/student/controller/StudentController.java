@@ -79,4 +79,15 @@ public class StudentController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Map<String, Object>> updateStudent(@RequestBody StudentUpdateDTO dto, @PathVariable Long id) {
+
+        studentService.updateStudent(id, dto);
+        Map<String, Object> response = new HashMap<>();
+        response.put("success", true);
+        response.put("message","Data updated successfully");
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 }
